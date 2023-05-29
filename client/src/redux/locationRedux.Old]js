@@ -1,0 +1,29 @@
+import { createSlice } from "@reduxjs/toolkit";
+
+const locationSlice = createSlice({
+    name: "location",
+    inicitalState:{
+/*         prev: {
+            prevLocation: "/",
+            prevYScroll: 0,
+        },
+        curr: {
+            currLocation: "/",
+            currYScroll: 0,
+        },  */
+        prev: 1,       
+    },
+    reducers: {
+        addPrevLocation: (state, action) => {
+            // state.prev.prevYScroll = state.curr.currYScroll;
+            // state.prev.prevLocation = state.curr.currLocation;
+        },
+        addCurrentLocation: (state,action) => {
+            // state.curr.currLocation = action.payload.location;
+            // state.curr.currLocation = action.payload.yScroll;
+        },       
+    }
+});
+
+export const {addPrevLocation, addCurrentLocation} = locationSlice.actions;
+export default locationSlice.reducer;
